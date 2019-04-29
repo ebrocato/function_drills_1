@@ -8,6 +8,7 @@
 
 
 function createGreeting(name, age) {
+  
     const yearOfBirth = getYearOfBirth(age);
     return 'hi my name is ' + name + ' and I am ' + age + ' years old.' + 'I was born in ' + yearOfBirth + '.';
 }
@@ -17,19 +18,24 @@ function createGreeting(name, age) {
 function getYearOfBirth(age) {
     if (age < 0) {
         throw new Error("Age cannot be negative");
-        return;
-    }
-
-
-    try {
-        const greeting1 = createGreeting("Emily", -27);
-    } catch (e) {
-        console.log("Age cannot be negative");
-
+        
     }
 }
+
+
+
+
+try {
+    const greeting1 = createGreeting("Emily", -27);
+}   catch (e) {
+    console.log(e);
+
+    }
+
+
+
 // const greeting1 = createGreeting("Emily", -27);
-console.log(greeting1);
+// console.log(greeting1);
 
 
 // try { const greeting1 = createGreeting("Emily", 27); }
